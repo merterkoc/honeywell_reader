@@ -9,5 +9,3 @@ export 'src/util/observer/observer.dart';
 export 'src/util/observer/observer_list.dart';
 
 export 'src/handler/handle_method.dart';
-
-export 'package:honeywell_rfid_reader_android/honeywell_rfid_reader_android.dart';
