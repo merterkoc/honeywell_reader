@@ -1,0 +1,30 @@
+name: honeywell_rfid_reader_android
+description: "RFID Reader plugin for Honeywell RFID readers on Android."
+version: 0.0.2
+homepage: https://github.com/merterkoc/honeywell_rfid_reader_android
+
+environment:
+  sdk: ^3.5.0
+  flutter: '>=3.3.0'
+
+dependencies:
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+  very_good_analysis: ^6.0.0
+  honeywell_rfid_reader_platform_interface:
+    path: ../honeywell_rfid_reader_platform_interface
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.honeywell_rfid_reader_android
+        pluginClass: HoneywellRfidReaderAndroidPlugin
+        dartPluginClass: HoneywellRfidReaderAndroid
