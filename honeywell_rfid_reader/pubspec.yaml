@@ -2,7 +2,7 @@ name: honeywell_rfid_reader
 description: "Honeywell RFID Reader Plugin"
 homepage: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader
 repository: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader
-version: 0.0.2
+version: 0.0.3
 
 environment:
   sdk: ^3.5.0

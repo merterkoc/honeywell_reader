@@ -2,7 +2,7 @@ name: honeywell_rfid_reader_android
 description: "RFID Reader plugin for Honeywell RFID readers on Android."
 homepage: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader_android
 repository: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader_android
-version: 0.0.2
+version: 0.0.3
 
 
 environment:

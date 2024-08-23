@@ -1,6 +1,6 @@
 name: honeywell_rfid_reader_platform_interface
 description: "Honeywell RFID Reader Interface"
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader_platform_interface
 
 environment:
