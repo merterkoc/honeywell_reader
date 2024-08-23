@@ -176,10 +176,10 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
             bluetoothAdapter.stopLeScan(mLeScanCallback);
             result.success(true);
         } else if (call.method.equals("readStart")) {
-            startRead();
+            startRead(result);
             result.success(true);
         } else if (call.method.equals("readStop")) {
-            stopRead();
+            stopRead(result);
             result.success(true);
         } else if (call.method.equals("bluetoothState")) {
             result.success(bluetoothAdapter.isEnabled());
@@ -284,16 +284,22 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
         return rfidManager.getReader() != null && rfidManager.getReader().available();
     }
 
-    private void startRead() {
+    private void startRead(Result result) {
         if (!isReaderAvailable()) {
             RfidReader reader = rfidManager.getReader();
             if (reader == null) {
-                throw new RuntimeException("Reader is null'");
+                if(result != null) {
+                    result.error("Reader is null'", "Reader is null'", null);
+                }
+                return;
             }
             boolean b = rfidManager.readerAvailable();
             Log.d("readerAvailable", "readerAvailable: " + b);
             if (!b) {
-                throw new RuntimeException("Reader not available");
+                if(result != null) {
+                    result.error("Reader not available", "Reader not available", null);
+                }
+                return;
             }
         }
         synchronized (mTagDataList) {
@@ -305,8 +311,11 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
         Log.d("startRead", "startRead completed");
     }
 
-    private void stopRead() {
+    private void stopRead(Result result) {
         if (!isReaderAvailable()) {
+            if(result != null) {
+                result.error("Reader not available", "Reader not available", null);
+            }
             return;
         }
         synchronized (mTagDataList) {
@@ -372,9 +381,9 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
 
             Log.d("onRfidTriggered", "onRfidTriggered");
             if (b) {
-                startRead();
+                startRead(null);
             } else {
-                stopRead();
+                stopRead(null);
             }
 
         }
