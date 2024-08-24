@@ -1,2 +1,3 @@
 # Project exclude paths
 /honeywell_rfid_reader_android/.dart_tool/
+/.idea/*
