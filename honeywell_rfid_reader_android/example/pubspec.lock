@@ -128,21 +128,23 @@ packages:
       path: "../../honeywell_rfid_reader"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.3"
   honeywell_rfid_reader_android:
     dependency: transitive
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.2"
+      name: honeywell_rfid_reader_android
+      sha256: "2a23274e6c9c4f611febdd21902a910270b5d30f19f5475a0df163d1e8d8cff4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   honeywell_rfid_reader_platform_interface:
     dependency: transitive
     description:
-      path: "../../honeywell_rfid_reader_platform_interface"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: honeywell_rfid_reader_platform_interface
+      sha256: c2837cb182eb768b3de432f432b16a72a8b89f98fee7a7a7c0e41ca0cc70e5c9
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   integration_test:
     dependency: "direct dev"
     description: flutter
