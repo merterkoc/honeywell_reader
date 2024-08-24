@@ -124,6 +124,10 @@ class RFIDManager extends Observer {
     await _honeywellPlugin.disconnectUsbDevice();
   }
 
+  Future<void> setTriggerMode(TriggerMode mode) async {
+    await _honeywellPlugin.setTriggerMode(mode);
+  }
+
   void close() {
     _connectionStatusChanged.close();
     _tagRead.close();

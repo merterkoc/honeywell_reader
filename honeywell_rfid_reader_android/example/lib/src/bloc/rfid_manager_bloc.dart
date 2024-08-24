@@ -33,6 +33,7 @@ class RfidManagerBloc extends Bloc<RfidManagerEvent, RfidManagerState> {
     on<ConnectDevice>(_connectDevice);
     on<ConnectUsbDevice>(_connectUsbDevice);
     on<DisconnectUsbDevice>(_disconnectUsbDevice);
+    on<SetTriggerMode>(_setTriggerMode);
 
     connectionStatusChangedStream =
         rfidManager.connectionStatusChangedStream.listen((status) {
@@ -174,7 +175,7 @@ class RfidManagerBloc extends Bloc<RfidManagerEvent, RfidManagerState> {
     Emitter<RfidManagerState> emit,
   ) {
     if (event.value) {
-      rfidManager. bluetoothEnable();
+      rfidManager.bluetoothEnable();
     } else {
       rfidManager.bluetoothDisable();
     }
@@ -274,5 +275,12 @@ class RfidManagerBloc extends Bloc<RfidManagerEvent, RfidManagerState> {
       );
       rethrow;
     }
+  }
+
+  FutureOr<void> _setTriggerMode(
+    SetTriggerMode event,
+    Emitter<RfidManagerState> emit,
+  ) {
+    rfidManager.setTriggerMode(event.mode);
   }
 }

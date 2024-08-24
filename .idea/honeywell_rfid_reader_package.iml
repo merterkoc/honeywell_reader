@@ -18,6 +18,8 @@
       <excludeFolder url="file://$MODULE_DIR$/honeywell_rfid_reader_android/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/honeywell_rfid_reader_android/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/honeywell_rfid_reader_android/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/honeywell_rfid_reader_android/android/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/honeywell_rfid_reader_android/example/android/.gradle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

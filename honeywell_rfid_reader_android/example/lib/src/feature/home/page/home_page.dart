@@ -115,6 +115,36 @@ class _HomePageState extends State<HomePage> {
                   icon: Icons.usb,
                   label: 'Disconnect USB',
                 ),
+                Column(
+                  children: [
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    CardButton(
+                      padding: EdgeInsets.zero,
+                      minimumSize: const Size(120, 56),
+                      maximumSize: const Size(120, 56),
+                      onPressed: () => context
+                          .read<RfidManagerBloc>()
+                          .add(const SetTriggerMode(mode: TriggerMode.RFID)),
+                      icon: Icons.rss_feed_outlined,
+                      label: 'Set RFID',
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    CardButton(
+                      padding: EdgeInsets.zero,
+                      minimumSize: const Size(120, 56),
+                      maximumSize: const Size(120, 56),
+                      onPressed: () => context
+                          .read<RfidManagerBloc>()
+                          .add(const SetTriggerMode(mode: TriggerMode.BARCODE)),
+                      icon: Icons.barcode_reader,
+                      label: 'Set Barcode',
+                    ),
+                  ],
+                ),
                 BlocBuilder<RfidManagerBloc, RfidManagerState>(
                   buildWhen: (previous, current) =>
                       previous.bluetoothStatus != current.bluetoothStatus ||

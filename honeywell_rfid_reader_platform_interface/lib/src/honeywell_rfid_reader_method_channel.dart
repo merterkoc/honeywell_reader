@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:honeywell_rfid_reader_platform_interface/src/constants/channel_address.dart';
 import 'package:honeywell_rfid_reader_platform_interface/src/honeywell_rfid_reader_platform_interface.dart';
 import 'package:honeywell_rfid_reader_platform_interface/src/model/my_bluetooth_device.dart';
+import 'package:honeywell_rfid_reader_platform_interface/src/model/trigger_mode.dart';
 
 /// An implementation of [HoneywellRfidReaderPlatform] that uses method
 /// channels.
@@ -91,5 +92,10 @@ class MethodChannelHoneywellRfidReader
   @override
   Future<void> disconnectUsbDevice() async {
     await methodChannel.invokeMethod('disconnectUsbDevice');
+  }
+
+  @override
+  Future<void> setTriggerMode(TriggerMode mode) async {
+    await methodChannel.invokeMethod('setTriggerMode', mode.value);
   }
 }

@@ -157,3 +157,12 @@ class DisconnectUsbDevice extends RfidManagerEvent {
   @override
   List<Object?> get props => [];
 }
+
+class SetTriggerMode extends RfidManagerEvent {
+  const SetTriggerMode({required this.mode});
+
+  final TriggerMode mode;
+
+  @override
+  List<Object?> get props => [mode];
+}

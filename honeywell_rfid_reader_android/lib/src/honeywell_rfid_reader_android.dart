@@ -80,4 +80,9 @@ class HoneywellRfidReaderAndroid implements HoneywellRfidReaderPlatform {
   Future<void> disconnectUsbDevice() async {
     return instance.disconnectUsbDevice();
   }
+
+  @override
+  Future<void> setTriggerMode(TriggerMode mode) {
+    return instance.setTriggerMode(mode);
+  }
 }

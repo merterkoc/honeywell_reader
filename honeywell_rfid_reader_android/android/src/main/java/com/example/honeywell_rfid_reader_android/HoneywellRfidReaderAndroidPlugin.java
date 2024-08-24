@@ -35,6 +35,7 @@ import com.honeywell.rfidservice.utils.ByteUtils;
 import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
@@ -71,6 +72,7 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
 
     private RfidManager rfidManager;
 
+    private TriggerMode currentTriggerMode = TriggerMode.RFID;
 
     private final List<BluetoothDeviceInfo> bluetoothDeviceList = new ArrayList<>();
 
@@ -205,79 +207,22 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
         } else if (call.method.equals("disconnectUsbDevice")) {
             rfidManager.disconnect();
             result.success(true);
+        } else if (call.method.equals("setTriggerMode")) {
+            String mode = call.arguments();
+            if (Objects.equals(mode, "RFID")) {
+                currentTriggerMode = TriggerMode.RFID;
+                rfidManager.setTriggerMode(TriggerMode.RFID);
+            } else if (Objects.equals(mode, "BARCODE")) {
+                currentTriggerMode = TriggerMode.BARCODE;
+                rfidManager.setTriggerMode(TriggerMode.BARCODE);
+            } else {
+                result.error("Error", "Invalid trigger mode", null);
+            }
+            Log.d("setTriggerMode", "setTriggerMode completed");
+            result.success(true);
         } else {
             result.notImplemented();
         }
-//        switch (call.method) {
-//            case "initialize":
-//                if (isInitialized) {
-//                    rfidManager.addEventListener(mEventListener);
-//                    result.success(true);
-//                } else {
-//                    result.error("Reader not initialized", "Reader not initialized", null);
-//                }
-//                break;
-//            case "scanBluetoothDevices":
-//                bluetoothAutoConnect = Boolean.TRUE.equals(call.arguments());
-//                final boolean permissionGranted = isBluetoothPermissionGranted();
-//                if (false) {
-//                    result.error("Bluetooth permission not granted", "Permission not granted", null);
-//                    return;
-//                } else if (false) {
-//                    result.error("Bluetooth not enabled", "Bluetooth not enabled", null);
-//                } else {
-//                    bluetoothAdapter.isEnabled();
-//                    bluetoothAdapter.startLeScan(mLeScanCallback);
-//                    result.success(true);
-//                }
-//                break;
-//            case "disconnectDevice":
-//                rfidManager.disconnect();
-//                result.success(true);
-//                break;
-//            case "disconnectRfidReader":
-//                rfidManager.setAutoReconnect(false);
-//                rfidManager.disconnect();
-//                if (rfidManager.isConnected()) {
-//                    throw new RuntimeException("Reader not disconnected");
-//                } else {
-//                    dartMessenger.sendRfidConnectionStatusEvent(ConnectionStatus.DISCONNECTED);
-//                }
-//                result.success(true);
-//                break;
-//            case "getAvailableBluetoothDevices":
-//                final List<Map<String, Object>> devices = new ArrayList<>();
-//                for (BluetoothDeviceInfo info : bluetoothDeviceList) {
-//                    devices.add(new HashMap<String, Object>() {{
-//                        put("name", info.dev.getName());
-//                        put("address", info.dev.getType());
-//                        put("rssi", info.rssi);
-//                    }});
-//                }
-//                result.success(devices);
-//                break;
-//            case "isBluetoothPermissionGranted":
-//                result.success(isBluetoothPermissionGranted());
-//                break;
-//            case "createReader":
-//                rfidManager.createReader();
-//                rfidManager.getReader().setOnTagReadListener(dataListener);
-//                result.success(true);
-//                break;
-//            case "disconnect":
-//                if (rfidManager == null) {
-//                    result.error("Reader not created", "Reader not created", null);
-//                    return;
-//                }
-//                rfidManager.disconnect();
-//                result.success(true);
-//                break;
-//            case "readRfid":
-//                startStream();
-//                read();
-//                result.success(true);
-//                break;
-
     }
 
     private boolean isReaderAvailable() {
@@ -288,7 +233,7 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
         if (!isReaderAvailable()) {
             RfidReader reader = rfidManager.getReader();
             if (reader == null) {
-                if(result != null) {
+                if (result != null) {
                     result.error("Reader is null'", "Reader is null'", null);
                 }
                 return;
@@ -296,7 +241,7 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
             boolean b = rfidManager.readerAvailable();
             Log.d("readerAvailable", "readerAvailable: " + b);
             if (!b) {
-                if(result != null) {
+                if (result != null) {
                     result.error("Reader not available", "Reader not available", null);
                 }
                 return;
@@ -313,7 +258,7 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
 
     private void stopRead(Result result) {
         if (!isReaderAvailable()) {
-            if(result != null) {
+            if (result != null) {
                 result.error("Reader not available", "Reader not available", null);
             }
             return;
@@ -390,6 +335,8 @@ public class HoneywellRfidReaderAndroidPlugin implements FlutterPlugin, MethodCa
 
         @Override
         public void onTriggerModeSwitched(TriggerMode triggerMode) {
+            Log.d("onTriggerModeSwitched", "onTriggerModeSwitched");
+            currentTriggerMode = triggerMode;
         }
 
         @Override

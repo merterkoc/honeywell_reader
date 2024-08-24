@@ -7,12 +7,16 @@ class CardButton extends StatelessWidget {
     required this.label,
     this.padding = const EdgeInsets.all(8),
     super.key,
+    this.minimumSize,
+    this.maximumSize,
   });
 
   final VoidCallback onPressed;
   final IconData icon;
   final String label;
   final EdgeInsets padding;
+  final Size? minimumSize;
+  final Size? maximumSize;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +24,8 @@ class CardButton extends StatelessWidget {
       padding: padding,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
-          minimumSize: const Size(120, 120),
-          maximumSize: const Size(120, 120),
+          minimumSize: minimumSize ?? const Size(120, 120),
+          maximumSize: maximumSize ?? const Size(120, 120),
         ),
         icon: Icon(icon),
         label: Text(label),
