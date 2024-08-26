@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android.bluetooth;
+package com.example.honeywell_reader_android.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
 

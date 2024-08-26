@@ -1,11 +1,11 @@
-package com.example.honeywell_rfid_reader_android.helper.observer;
+package com.example.honeywell_reader_android.helper.observer;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.example.honeywell_rfid_reader_android.messages.DartMessenger;
+import com.example.honeywell_reader_android.messages.DartMessenger;
 
 public class TagChangeBroadcastReceiver extends BroadcastReceiver {
 

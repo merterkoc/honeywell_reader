@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:honeywell_rfid_reader_android_example/src/bloc/rfid_manager_bloc.dart';
-import 'package:honeywell_rfid_reader_android_example/src/model/enum/operation_status.dart';
-import 'package:honeywell_rfid_reader_android_example/src/model/enum/scanning_status.dart';
+import 'package:honeywell_reader_android_example/src/bloc/rfid_manager_bloc.dart';
+import 'package:honeywell_reader_android_example/src/model/enum/operation_status.dart';
+import 'package:honeywell_reader_android_example/src/model/enum/scanning_status.dart';
 
 class BluetoothDeviceListDialog extends StatefulWidget {
   const BluetoothDeviceListDialog({super.key});

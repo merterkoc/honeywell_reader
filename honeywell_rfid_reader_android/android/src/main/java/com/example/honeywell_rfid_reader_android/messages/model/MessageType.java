@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android.messages.model;
+package com.example.honeywell_reader_android.messages.model;
 
 public enum MessageType {
     RFID_CONNECTION_STATUS_CHANGED,

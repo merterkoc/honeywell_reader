@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/constants/channel_address.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/honeywell_rfid_reader_platform_interface.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/model/my_bluetooth_device.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/model/trigger_mode.dart';
+import 'package:honeywell_reader_platform_interface/src/constants/channel_address.dart';
+import 'package:honeywell_reader_platform_interface/src/honeywell_reader_platform_interface.dart';
+import 'package:honeywell_reader_platform_interface/src/model/my_bluetooth_device.dart';
+import 'package:honeywell_reader_platform_interface/src/model/trigger_mode.dart';
 
 /// An implementation of [HoneywellRfidReaderPlatform] that uses method
 /// channels.

@@ -1,4 +1,4 @@
-group = "com.example.honeywell_rfid_reader_android"
+group = "com.example.honeywell_reader_android"
 version = "1.0"
 
 buildscript {
@@ -23,7 +23,7 @@ apply plugin: "com.android.library"
 
 android {
     if (project.android.hasProperty("namespace")) {
-        namespace = "com.example.honeywell_rfid_reader_android"
+        namespace = "com.example.honeywell_reader_android"
     }
 
     compileSdk = 34
@@ -54,6 +54,6 @@ android {
 }
 
 dependencies {
-    api project(":honeywell_rfid_reader_plugin")
-    api project(":honeywell_rfid_reader_data_collection")
+    api project(":honeywell_reader_plugin")
+    api project(":honeywell_reader_data_collection")
 }

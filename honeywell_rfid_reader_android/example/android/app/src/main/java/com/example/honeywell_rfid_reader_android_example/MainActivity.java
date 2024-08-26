@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android_example;
+package com.example.honeywell_reader_android_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

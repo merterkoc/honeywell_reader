@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
-import 'package:honeywell_rfid_reader_platform_interface/honeywell_rfid_reader_platform_interface.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/constants/channel_address.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/util/observer/observer.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/util/observer/observer_list.dart';
+import 'package:honeywell_reader_platform_interface/honeywell_reader_platform_interface.dart';
+import 'package:honeywell_reader_platform_interface/src/constants/channel_address.dart';
+import 'package:honeywell_reader_platform_interface/src/util/observer/observer.dart';
+import 'package:honeywell_reader_platform_interface/src/util/observer/observer_list.dart';
 
 class HandleMethod extends ObserverList {
   static final MethodChannel _channel =

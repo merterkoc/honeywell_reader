@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:honeywell_rfid_reader_android_example/src/bloc/rfid_manager_bloc.dart';
+import 'package:honeywell_reader_android_example/src/bloc/rfid_manager_bloc.dart';
 
 class BluetoothSettingsWidget extends StatelessWidget {
   const BluetoothSettingsWidget({super.key});

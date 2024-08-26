@@ -1,4 +1,4 @@
-# honeywell_rfid_reader_android_beta
+# honeywell_reader_android_beta
 
 Honeywell RFID Reader Plugin Android Beta.
 
@@ -7,7 +7,7 @@ Honeywell RFID Reader Plugin Android Beta.
 
 ## 1. Include Modules in `settings.gradle`
 
-To include the `honeywell_rfid_reader_plugin` and `honeywell_rfid_reader_data_collection` modules in your Flutter project, update the `settings.gradle` file located in the `android` directory.
+To include the `honeywell_reader_plugin` and `honeywell_reader_data_collection` modules in your Flutter project, update the `settings.gradle` file located in the `android` directory.
 
 **Path**: `your_project/android/settings.gradle`
 
@@ -17,8 +17,8 @@ To include the `honeywell_rfid_reader_plugin` and `honeywell_rfid_reader_data_co
 2. Add the following lines to include the required modules:
 
    ```groovy
-   include ":honeywell_rfid_reader_plugin"
-   include ":honeywell_rfid_reader_data_collection"
+   include ":honeywell_reader_plugin"
+   include ":honeywell_reader_data_collection"
    ```
 
 This will link the specified modules to your project.
@@ -90,7 +90,7 @@ This configuration disables resource shrinking and minification for the release 
 
 ## 5. Add aar files.
 
-Please copy honeywell_rfid_reader_plugin and honeywell_rfid_reader_data_collection files from example app and paste android folder in your project.
+Please copy honeywell_reader_plugin and honeywell_reader_data_collection files from example app and paste android folder in your project.
 
 
 ---

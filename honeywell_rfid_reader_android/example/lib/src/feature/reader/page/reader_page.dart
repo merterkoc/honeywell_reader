@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:honeywell_rfid_reader_android_example/src/animation/type_text_animation.dart';
-import 'package:honeywell_rfid_reader_android_example/src/bloc/rfid_manager_bloc.dart';
+import 'package:honeywell_reader_android_example/src/animation/type_text_animation.dart';
+import 'package:honeywell_reader_android_example/src/bloc/rfid_manager_bloc.dart';
 
 class ReaderPage extends StatelessWidget {
   const ReaderPage({super.key});

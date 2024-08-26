@@ -1,6 +1,6 @@
-import 'package:honeywell_rfid_reader_platform_interface/src/honeywell_rfid_reader_method_channel.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/model/my_bluetooth_device.dart';
-import 'package:honeywell_rfid_reader_platform_interface/src/model/trigger_mode.dart';
+import 'package:honeywell_reader_platform_interface/src/honeywell_reader_method_channel.dart';
+import 'package:honeywell_reader_platform_interface/src/model/my_bluetooth_device.dart';
+import 'package:honeywell_reader_platform_interface/src/model/trigger_mode.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 abstract class HoneywellRfidReaderPlatform extends PlatformInterface {

@@ -1,1 +1,1 @@
-export 'src/honeywell_rfid_reader_android.dart';
+export 'src/honeywell_reader_android.dart';

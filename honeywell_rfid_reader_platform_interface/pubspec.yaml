@@ -1,7 +1,7 @@
-name: honeywell_rfid_reader_platform_interface
+name: honeywell_reader_platform_interface
 description: "Honeywell RFID Reader Interface"
 version: 0.0.3
-homepage: https://github.com/merterkoc/honeywell_rfid_reader_package/tree/main/honeywell_rfid_reader_platform_interface
+homepage: https://github.com/merterkoc/honeywell_reader_package/tree/main/honeywell_reader_platform_interface
 
 environment:
   sdk: ^3.5.0
@@ -12,8 +12,8 @@ dependencies:
   plugin_platform_interface: ^2.1.8
   flutter:
     sdk: flutter
-#  honeywell_rfid_reader_android:
-#    path: ../honeywell_rfid_reader_android
+#  honeywell_reader_android:
+#    path: ../honeywell_reader_android
 
 dev_dependencies:
   flutter_test:

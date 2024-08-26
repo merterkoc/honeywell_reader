@@ -4,10 +4,10 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:honeywell_rfid_reader/honeywell_rfid_reader.dart';
-import 'package:honeywell_rfid_reader_android_example/src/model/enum/operation_status.dart';
-import 'package:honeywell_rfid_reader_android_example/src/model/enum/scanning_status.dart';
-import 'package:honeywell_rfid_reader_android_example/src/model/scanner_settings.dart';
+import 'package:honeywell_reader/honeywell_reader.dart';
+import 'package:honeywell_reader_android_example/src/model/enum/operation_status.dart';
+import 'package:honeywell_reader_android_example/src/model/enum/scanning_status.dart';
+import 'package:honeywell_reader_android_example/src/model/scanner_settings.dart';
 
 part 'rfid_manager_event.dart';
 

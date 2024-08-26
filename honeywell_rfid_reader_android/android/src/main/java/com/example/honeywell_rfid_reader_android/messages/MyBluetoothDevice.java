@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android.messages;
+package com.example.honeywell_reader_android.messages;
 
 import java.util.HashMap;
 

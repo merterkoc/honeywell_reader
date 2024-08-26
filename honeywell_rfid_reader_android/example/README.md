@@ -1,6 +1,6 @@
-# honeywell_rfid_reader_android_example
+# honeywell_reader_android_example
 
-Demonstrates how to use the honeywell_rfid_reader_android plugin.
+Demonstrates how to use the honeywell_reader_android plugin.
 
 ## Getting Started
 

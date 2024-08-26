@@ -1,12 +1,12 @@
-package com.example.honeywell_rfid_reader_android.messages;
+package com.example.honeywell_reader_android.messages;
 
 import android.content.Context;
 import android.os.Handler;
 
 import androidx.annotation.NonNull;
 
-import com.example.honeywell_rfid_reader_android.messages.model.ConnectionStatus;
-import com.example.honeywell_rfid_reader_android.messages.model.MessageType;
+import com.example.honeywell_reader_android.messages.model.ConnectionStatus;
+import com.example.honeywell_reader_android.messages.model.MessageType;
 
 import java.util.HashMap;
 import java.util.Map;

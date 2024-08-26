@@ -1,3 +1,3 @@
-export 'src/honeywell_rfid_reader.dart';
+export 'src/honeywell_reader.dart';
 
-export 'package:honeywell_rfid_reader_platform_interface/honeywell_rfid_reader_platform_interface.dart';
+export 'package:honeywell_reader_platform_interface/honeywell_reader_platform_interface.dart';

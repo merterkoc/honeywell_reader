@@ -4,7 +4,7 @@
 // void main() {
 //   TestWidgetsFlutterBinding.ensureInitialized();
 //
-//   const channel = MethodChannel('honeywell_rfid_reader_android');
+//   const channel = MethodChannel('honeywell_reader_android');
 //
 //   setUp(() {
 //     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger

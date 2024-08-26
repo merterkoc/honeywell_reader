@@ -1,4 +1,4 @@
-import 'package:honeywell_rfid_reader_platform_interface/src/util/observer/observer.dart';
+import 'package:honeywell_reader_platform_interface/src/util/observer/observer.dart';
 
 abstract class ObserverList extends Observer {
   @override

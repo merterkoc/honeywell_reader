@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android;
+package com.example.honeywell_reader_android;
 
 import static android.content.Context.RECEIVER_EXPORTED;
 import static android.content.Context.RECEIVER_NOT_EXPORTED;
@@ -15,14 +15,14 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.example.honeywell_rfid_reader_android.bluetooth.BluetoothDeviceInfo;
-import com.example.honeywell_rfid_reader_android.constants.ChannelAddress;
-import com.example.honeywell_rfid_reader_android.helper.observer.TagChangeBroadcastReceiver;
-import com.example.honeywell_rfid_reader_android.helper.observer.TagInfo;
-import com.example.honeywell_rfid_reader_android.messages.DartEventBroadcaster;
-import com.example.honeywell_rfid_reader_android.messages.DartMessenger;
-import com.example.honeywell_rfid_reader_android.messages.MyBluetoothDevice;
-import com.example.honeywell_rfid_reader_android.messages.model.ConnectionStatus;
+import com.example.honeywell_reader_android.bluetooth.BluetoothDeviceInfo;
+import com.example.honeywell_reader_android.constants.ChannelAddress;
+import com.example.honeywell_reader_android.helper.observer.TagChangeBroadcastReceiver;
+import com.example.honeywell_reader_android.helper.observer.TagInfo;
+import com.example.honeywell_reader_android.messages.DartEventBroadcaster;
+import com.example.honeywell_reader_android.messages.DartMessenger;
+import com.example.honeywell_reader_android.messages.MyBluetoothDevice;
+import com.example.honeywell_reader_android.messages.model.ConnectionStatus;
 import com.honeywell.rfidservice.EventListener;
 import com.honeywell.rfidservice.RfidManager;
 import com.honeywell.rfidservice.TriggerMode;

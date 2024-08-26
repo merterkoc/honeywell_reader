@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android.helper.observer;
+package com.example.honeywell_reader_android.helper.observer;
 
 import com.honeywell.rfidservice.rfid.TagReadData;
 

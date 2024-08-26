@@ -1,4 +1,4 @@
-package com.example.honeywell_rfid_reader_android;
+package com.example.honeywell_reader_android;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
