@@ -170,10 +170,10 @@ packages:
     dependency: transitive
     description:
       name: dart_style
-      sha256: "99e066ce75c89d6b29903d788a7bb9369cf754f7b24bf70bf4b6d6d6b26853b9"
+      sha256: "7856d364b589d1f08986e140938578ed36ed948581fbc3bc9aef1805039ac5ab"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.6"
+    version: "2.3.7"
   fake_async:
     dependency: transitive
     description:
@@ -410,10 +410,10 @@ packages:
     dependency: "direct dev"
     description:
       name: pigeon
-      sha256: d0483feaf59730f7b5b9068c890d67474ca2808b3861066a4fa218fd8feb5497
+      sha256: "95481446c02fa79fcf0e8014882f8a3b87fd06c257e9e1c3d4cc6d102a925ad8"
       url: "https://pub.dev"
     source: hosted
-    version: "22.0.0"
+    version: "22.4.0"
   platform:
     dependency: transitive
     description:
