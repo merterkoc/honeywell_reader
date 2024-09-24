@@ -1,0 +1,37 @@
+name: honeywell_reader
+description: Flutter plugin for reading barcodes and RFID tags.
+repository: https://github.com/merterkoc/honeywell_reader/tree/main/honeywell_reader
+version: 1.0.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: '>=3.22.0'
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: honeywell_reader_android
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # zebra_barcode_reader_android: ^1.0.0
+  # zebra_barcode_reader_platform_interface: ^1.0.0
+  honeywell_reader_android:
+    path: ../honeywell_reader_android
+  honeywell_reader_platform_interface:
+    path: ../honeywell_reader_platform_interface
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+topics:
+  - honeywell
+  - barcode
+  - rfid
+  - eda52
